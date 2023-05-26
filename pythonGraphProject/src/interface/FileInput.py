@@ -240,10 +240,12 @@ class Ui_Form(QMainWindow):
         f.write("Metin Ozeti ;\n")
         f.write(ozet)
         f.write(f"\n\nROUGE benzerlik skoru: {rougeSkoru}")
+        f.close()
 
         file = open("cumleler.txt","w")
         for node in Input.nodes:
             file.write(f"{node.textNo} - {node.text}\n")
+        file.close()
 
 if __name__ == "__main__":
     import sys
